@@ -2,44 +2,80 @@ package main.java.app.models;
 
 public class Users {
 
-    private int id;
-    private String nameUser;
-    private String passwordUser;
-    private String type; // admin - cajero
+    private int idUsuario;
+    private String nombre;
+    private String apellido;
+    private String username;
+    private String password;
+    private boolean activo;
+    private Role rol;
 
     public Users() {}
-    public Users(int id, String nameUser, String passwordUser, String type) {
-        this.id = id;
-        this.nameUser = nameUser;
-        this.passwordUser = passwordUser;
-        this.type = type;
+
+    public Users(int idUsuario, String nombre, String apellido,
+                String username, String password, boolean activo, Role rol) {
+        this.idUsuario = idUsuario;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.username = username;
+        this.password = password;
+        this.activo = activo;
+        this.rol = rol;
     }
-    // Getters
-    public int getId() {
-        return id;
+
+    public int getIdUsuario() {
+        return idUsuario;
     }
-    public String getNameUser() {
-        return nameUser;
+
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
     }
-    public String getPasswordUser() {
-        return passwordUser;
+
+    public String getNombre() {
+        return nombre;
     }
-    public String getTipo() {
-        return type;
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
-    // Setters
-    public void setId(int id) {
-        this.id = id;
+
+    public String getApellido() {
+        return apellido;
     }
-    public void setNameUser(String nameUser) {
-        this.nameUser = nameUser;
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
-    public void setPasswordUser(String passwordUser) {
-        this.passwordUser = passwordUser;
+
+    public String getUsername() {
+        return username;
     }
-    public void setType(String type) {
-        this.type = type;
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public boolean isActivo() {
+        return activo;
+    }
+
+    public void setActivo(boolean activo) {
+        this.activo = activo;
+    }
+
+    public Role getRol() {
+        return rol;
+    }
+
+    public void setRol(Role rol) {
+        this.rol = rol;
     }
 }
-
-
